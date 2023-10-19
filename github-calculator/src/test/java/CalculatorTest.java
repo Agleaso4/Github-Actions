@@ -5,7 +5,7 @@ import java.util.Set;
 
 import static org.junit.Assert.*;
 public class CalculatorTest {
-    // Test
+    // Test 1
 
     @Test
     public void addTest(){
