@@ -16,6 +16,8 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           architecture: x64
+      - name: POM Config
+        run: mvn -f '/d/School/Fall 23/CS 204/Module 7 - Github Actions/Github-Actions/github-calculator/pom.xml'
       - name: Clean
         run: mvn -ntp clean
       - name: Build
