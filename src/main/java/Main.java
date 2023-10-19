@@ -31,6 +31,10 @@ public class Main {
                 System.out.println(calculator.multiply(first, second));
             } else if (calcType.equalsIgnoreCase("binary")) {
                 System.out.println(calculator.intToBinaryNumber(first));
+            } else if (calcType.equalsIgnoreCase("divide")) {
+                System.out.println(calculator.divide(first, second));
+            } else if (calcType.equalsIgnoreCase("fibonacci")) {
+                System.out.println(calculator.fibonacciNumberFinder(first));
             } else {
                 System.out.println("Incorrect input");
             }
