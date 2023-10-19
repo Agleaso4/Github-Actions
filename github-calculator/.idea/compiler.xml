@@ -9,5 +9,8 @@
         <module name="GitHubCalculator" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Github-Calculator" target="20" />
+    </bytecodeTargetLevel>
   </component>
 </project>
