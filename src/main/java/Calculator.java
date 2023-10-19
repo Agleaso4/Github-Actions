@@ -1,3 +1,4 @@
+import java.util.UUID;
 
 class Calculator {
 
@@ -38,7 +39,13 @@ class Calculator {
     etc
      */
     int fibonacciNumberFinder(int n){
-        return 0;
+        if (n < 0) {
+            return -1;
+        } else if (n == 0 || n == 1) {
+            return n;
+        } else {
+            return fibonacciNumberFinder(n - 1) + fibonacciNumberFinder(n - 2);
+        }
     }
 
 
@@ -50,7 +57,16 @@ class Calculator {
     if int a = 16 then this method returns: 10000
      */
     String intToBinaryNumber(int number){
-        return null;
+        StringBuilder binaryNumber = new StringBuilder();
+        if(number == 0){
+            return "0";
+        }
+        while (number > 0) {
+            int remainder = number % 2;
+            binaryNumber.append(remainder);
+            number /= 2;
+        }
+        return binaryNumber.reverse().toString();
     }
 
     /*
@@ -62,8 +78,7 @@ class Calculator {
     if you run this function twice with the same String input, it must return 2 unique String IDs
      */
     String createUniqueID(String n){
-        return null;
+        UUID uuid = UUID.randomUUID();
+        return uuid.toString() + n;
     }
-
-
 }
