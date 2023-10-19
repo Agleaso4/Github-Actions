@@ -1,13 +1,13 @@
-  name: Docker Workflow
-  on:
-    push:
-      paths:
-        - '**.java'
-      workflow_dispatch:
-  jobs:
-    build_Docker_image:
-      name: Push Docker image to Docker hub
-      runs-on: ubuntu-latest
+name: Docker Workflow
+on:
+  push:
+    paths:
+      - '**.java'
+  workflow_dispatch:
+jobs:
+  build_Docker_image:
+    name: Push Docker image to Docker hub
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 11
